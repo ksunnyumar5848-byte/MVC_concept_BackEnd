@@ -1,0 +1,26 @@
+mvc architecture 
+m------------- model 
+v-----------  view means end ponit nothing anything this is the url end ponit 
+c------------  controler controler means  call back function which are the excute 
+
+
+----------  crud opretion of the rest api 
+get ----- get methods are the read information and rend the response 
+post ----- post methods are the send the data into through the frontend 
+delete methods are delete the content form the this url 
+patch ---- this methods arethe update the content form the the this url 
+
+
+
+----------------  afte the crud opretion send the into the form 
+
+req.body 
+url parms 
+queary
+ 
+
+ then connect the data base 
+
+
+what are the mongoose 
+mongoose are the interface for the database and backed 
