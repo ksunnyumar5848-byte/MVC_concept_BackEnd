@@ -24,3 +24,13 @@ queary
 
 what are the mongoose 
 mongoose are the interface for the database and backed 
+
+
+view----> view folder kai under maire ko group create karna hai 
+
+schema ----> Document ,Documnet are the store specific user information name age id 
+model------> Collection ,Collection are the group of the document 
+
+
+=====================  *    model folder kai under group create karte hai  *   ==============================
+
