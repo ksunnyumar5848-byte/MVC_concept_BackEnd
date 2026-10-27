@@ -88,5 +88,4 @@ Aspiring Backend Developer passionate about Node.js, Express.js, MongoDB, and Py
 - Express.js
 - MongoDB
 - Mongoose
-- Python
 - Git & GitHub

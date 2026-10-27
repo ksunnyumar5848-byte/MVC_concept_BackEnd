@@ -14,4 +14,6 @@ const userschema=mongoose.Schema({
 
 
 
-mongoose.model("UserGroup",userschema)
+let User=mongoose.model("UserGroup",userschema)
+
+module.exports=User
