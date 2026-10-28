@@ -48,10 +48,21 @@ app.get("/all-user",async (req,res)=>{
   
   const totaluser= await User.find()
     res.send(totaluser)
-    
+
+})
+app.get('/kuchu-puchu/:id',async (req,res)=>{
+
+    const {id}=req.params
+
+      const uniqueUser= await User.findById(id)
+
+     res.send(uniqueUser)
+
+
 })
 
 
+// 6ae18d206d414f19104d06b3
 
 app.listen(3001,()=>{
     console.log("srever are listing the port number 3001")
