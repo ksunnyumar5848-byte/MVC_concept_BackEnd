@@ -4,11 +4,12 @@ const mongoose=require("mongoose")
 
 const userschema=mongoose.Schema({
     name:String,
-    email:String,
-    password:Number,
-    isVerified:Boolean,
-    phone:Number
-},{
+    age:Number,
+    marks:Number,
+    salary:Number,
+    profission:String
+},
+{
     timestamps:true
 })
 

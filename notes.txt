@@ -34,3 +34,4 @@ model------> Collection ,Collection are the group of the document
 
 =====================  *    model folder kai under group create karte hai  *   ==============================
 
+post methods ---frontend se data la kar backend tak pahuchata hai 
