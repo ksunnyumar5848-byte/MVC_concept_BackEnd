@@ -50,6 +50,8 @@ app.get("/all-user",async (req,res)=>{
     res.send(totaluser)
 
 })
+
+
 app.get('/kuchu-puchu/:id',async (req,res)=>{
 
     const {id}=req.params
@@ -62,8 +64,22 @@ app.get('/kuchu-puchu/:id',async (req,res)=>{
 })
 
 
-// 6ae18d206d414f19104d06b3
 
+
+app.delete('/delete/:id', async (req,res)=>{
+
+  const {id}=req.params
+
+  let deleteuser= await User.findByIdAndDelete(id)
+
+  res.send(deleteuser)
+
+})
+
+
+// 6ae18d206d414f19104d06b3
+//6ae18d036d414f19104d06b2
+// 6ae19a98bd34dee3ea146a18
 app.listen(3001,()=>{
     console.log("srever are listing the port number 3001")
 })
