@@ -41,6 +41,16 @@ app.post('/usercreate',async (req,res)=>{
 
 })
 
+// read the how many document and collection store in the data base 
+
+
+app.get("/all-user",async (req,res)=>{
+  
+  const totaluser= await User.find()
+    res.send(totaluser)
+    
+})
+
 
 
 app.listen(3001,()=>{
