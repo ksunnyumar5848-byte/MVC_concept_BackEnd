@@ -1,4 +1,4 @@
-const userdata=require('../model/User.js')
+const userdata=require('../model/usermodel.js')
 
 const userGet= async (req,res)=>{
 

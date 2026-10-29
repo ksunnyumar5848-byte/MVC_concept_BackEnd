@@ -5,9 +5,9 @@ const mongoose=require('mongoose')
 const Physics=require('./Routes/Book_product.js');
 const UserRouter=require('./Routes/user,routes.js')
 const {Connect_to_database}=require('./config/DB.js');
-const User=require('./model/User.js')
+const User=require('./model/usermodel.js')
 
-const BlogSchemaInfo= require('./model/Blog.js')
+const Blog= require('./model/Blog.js')
 
 
 Connect_to_database()
@@ -105,6 +105,32 @@ app.put('/update/:id',async(req,res)=>{
 })
 
 
+// blog are the created methods are use to 
+
+app.post('/blog',async (req,res)=>{
+
+    const formdata=req.body
+     await Blog.create({
+         title:formdata.title,
+         content:formdata.content
+      }
+      )
+
+    res.send("blog are the created bro ")
+})
+
+
+app.get('/blog_read',async(req,res)=>{
+
+    const bloguser=  await Blog.find()
+     
+    res.send({
+        message: "blod are the read Successfull .... ! 💘💘😘    ",
+        info:bloguser
+    }
+        
+)
+})
 
 
 

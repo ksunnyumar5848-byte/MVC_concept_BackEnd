@@ -4,15 +4,15 @@ const BlogSchema=mongoose.Schema({
    
    title:String,
    content:String,
-   user:{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:UserGroup
+    user:{
+     type:mongoose.Schema.Types.ObjectId,
+     ref: "User"
    }
     
 },{
     timestamps:true
 })
 
-let BlogSchemaInfo=mongoose.model("Blog",BlogSchema)
+let Blog=mongoose.model("Blog",BlogSchema)
 
-module.exports=BlogSchemaInfo
+module.exports=Blog
