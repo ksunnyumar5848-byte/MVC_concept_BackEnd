@@ -7,6 +7,8 @@ const UserRouter=require('./Routes/user,routes.js')
 const {Connect_to_database}=require('./config/DB.js');
 const User=require('./model/User.js')
 
+const BlogSchemaInfo= require('./model/Blog.js')
+
 
 Connect_to_database()
 app.use(express.json())
@@ -65,7 +67,7 @@ app.get('/kuchu-puchu/:id',async (req,res)=>{
 
 
 
-
+// delete the user with unique id 
 app.delete('/delete/:id', async (req,res)=>{
 
   const {id}=req.params
@@ -80,6 +82,36 @@ app.delete('/delete/:id', async (req,res)=>{
 // 6ae18d206d414f19104d06b3
 //6ae18d036d414f19104d06b2
 // 6ae19a98bd34dee3ea146a18
+
+
+
+
+//  6ae19accbd34dee3ea146a19
+
+
+// /update/6ae19accbd34dee3ea146a19  this url are the update roshan name 
+// here this methods are the update the document info 
+
+app.put('/update/:id',async(req,res)=>{
+
+    const {id}=req.params
+    console.log(id)
+
+    const formData=req.body
+    console.log(formData)
+    const updateuser= await User.findByIdAndUpdate(id,formData,{new:true})
+    console.log(updateuser)
+    res.send(updateuser)
+})
+
+
+
+
+
+
+
+
+
 app.listen(3001,()=>{
     console.log("srever are listing the port number 3001")
 })
