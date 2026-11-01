@@ -8,6 +8,7 @@ const route=express.Router()
 const bcrypt=require('bcrypt')
 
 
+
 async function LoginStudent(req,res){
 
     const {email,password}=req.body

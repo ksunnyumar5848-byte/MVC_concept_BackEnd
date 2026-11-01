@@ -8,7 +8,7 @@ const userschema=mongoose.Schema({
     marks:Number,
     salary:Number,
     profission:String,
-    password:Number,
+    password:String,
     email:String
 },
 {

@@ -7,8 +7,13 @@ const UserRouter=require('./Routes/user,routes.js')
 const {Connect_to_database}=require('./config/DB.js');
 const User=require('./model/usermodel.js')
 const bcrypt=require("bcrypt")
-
 const Blog= require('./model/Blog.js')
+
+const {Agevalidation}=require('./MiddleWare/age.js')
+
+const userLoginRouter=require('./USER_validation/login.js')
+
+const UserRegestionRouter=require('./USER_validation/Registor.js')
 
 
 Connect_to_database()
@@ -145,14 +150,18 @@ app.get('/blog_read',async(req,res)=>{
 app.post("/Registion",async (req,res)=>{
    
     const input=req.body
+
+    const mysalt=await bcrypt.genSalt(10)
+
+    const hashpassword=await bcrypt.hash(input.password,mysalt)
       
    const userRegistor= await User.create({
         name:input.name,
         marks:input.marks,
         age:input.age,
         salary:input.salary,
-        profission:input.salary,
-        password:input.password,
+        profission:input.profission,
+        password:hashpassword,
         email:input.email
     })
 
@@ -168,6 +177,23 @@ app.post("/Registion",async (req,res)=>{
 
 
 
+// create the use login form 
+
+
+app.post('/Loing_User',async (req,res)=>{
+
+    const {password,email}=req.body
+    
+    const salt=await bcrypt.genSalt()
+
+    const bcryptpassword=await bcrypt.hash(myformdata.password,salt)
+     
+    await User.findOne({
+        email:email
+    })
+
+    res.json(userdata)
+})
 
 
 
@@ -177,7 +203,8 @@ app.post("/Registion",async (req,res)=>{
 
 
 
-
+app.use('/user',UserRegestionRouter)
+app.use('/user',Agevalidation,userLoginRouter)
 
 app.listen(3001,()=>{
     console.log("srever are listing the port number 3001")

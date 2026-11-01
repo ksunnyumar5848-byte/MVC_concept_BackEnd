@@ -45,3 +45,13 @@ post methods ---frontend se data la kar backend tak pahuchata hai
 
 
 hash ---->  your real data are the covert into fixed size string and this string are bycript then you see the real data input 
+
+
+
+bycript.compare methods it check the plain text password and bycript password if both password are the match then user are login 
+
+
+how to create the login form 
+
+
+first analogy find user email if match then check the password if password are match it means both are the match then user are successful match 
