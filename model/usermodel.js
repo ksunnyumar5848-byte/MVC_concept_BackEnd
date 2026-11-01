@@ -7,7 +7,9 @@ const userschema=mongoose.Schema({
     age:Number,
     marks:Number,
     salary:Number,
-    profission:String
+    profission:String,
+    password:Number,
+    email:String
 },
 {
     timestamps:true
