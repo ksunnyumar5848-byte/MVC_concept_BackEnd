@@ -6,6 +6,7 @@ const Physics=require('./Routes/Book_product.js');
 const UserRouter=require('./Routes/user,routes.js')
 const {Connect_to_database}=require('./config/DB.js');
 const User=require('./model/usermodel.js')
+const bcrypt=require("bcrypt")
 
 const Blog= require('./model/Blog.js')
 
@@ -36,7 +37,9 @@ app.post('/usercreate',async (req,res)=>{
         age:formdata.age,
         marks:formdata.marks,
         salary:formdata.salary,
-        profission:formdata.profission
+        profission:formdata.profission,
+        password:formdata.password,
+        email:formdata.email
     })
 
     res.send(usercreate)
@@ -131,6 +134,44 @@ app.get('/blog_read',async(req,res)=>{
         
 )
 })
+
+
+
+
+
+// create the registion form 
+
+
+app.post("/Registion",async (req,res)=>{
+   
+    const input=req.body
+      
+   const userRegistor= await User.create({
+        name:input.name,
+        marks:input.marks,
+        age:input.age,
+        salary:input.salary,
+        profission:input.salary,
+        password:input.password,
+        email:input.email
+    })
+
+    res.send({
+        "message":"user are Successfull are Registor 👧👧👧👧👧 ......!",
+        "userInfo":userRegistor
+    })
+
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
