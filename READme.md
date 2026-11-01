@@ -32,36 +32,8 @@ Clean Code Structure
 Better Maintainability
 Easy Team Collaboration
 Reusable Components
-Scalable Architecture
-📁 Project Structure
-MVC_Architecture
-│
-├── config
-│   └── DB.js
-│
-├── controller
-│   ├── User_controller.js
-│   └── physics_page.js
-│
-├── MiddleWare
-│   └── age.js
-│
-├── model
-│   ├── usermodel.js
-│   └── Blog.js
-│
-├── Routes
-│
-├── USER_validation
-│   ├── Registor.js
-│   └── login.js
-│
-├── view
-│
-├── index.js
-├── package.json
-├── package-lock.json
-└── README.md
+
+
 ⚡ Features
 ✅ User Registration
 Create New User Account
@@ -144,19 +116,7 @@ Deployment on Railway
 Sunny Kumar
 Aspiring Backend Developer passionate about Backend Development and scalable REST APIs.
 
-🚀 Skills
-JavaScript
-Node.js
-Express.js
-MongoDB
-Mongoose
-JWT
-bcrypt
-Middleware
-REST APIs
-Git
-GitHub
-MVC Architecture
+🚀 Skills   JavaScript Node.jsExpress.js ,MongoDBMongoose , JWTbcrypt Middleware REST APIs GitGitHub MVCArchitecture
 📍 Hazaribag, Jharkhand, India
 
 ⭐ Goal
